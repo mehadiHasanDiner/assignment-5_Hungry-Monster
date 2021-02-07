@@ -29,7 +29,7 @@ function getMealList(){
             });
             mealList.classList.remove('notMatch');
         } else{
-            html = "Sorry, nothing match with the food name!";
+            html = "Sorry, nothing match with the meal name!";
             mealList.classList.add('notMatch');
         }
 
