@@ -22,7 +22,7 @@ body{
     max-width: 1280px;
     margin: 0 auto;
     padding: 2rem;
-    background-color: white;
+    background-color: rgb(255, 222, 184);
     text-align: center;
 }
 
@@ -31,5 +31,55 @@ body{
 }
 
 #meal{
-    mara
+    margin-top: 2.4rem 0;
+}
+
+.meal-item{
+    background-color: seashell;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 21px -12px rgb(0, 0, 0);
+    margin: 2rem 0;
+}
+
+.meal-img img{
+    width: 100%;
+    display: block;
+}
+
+.meal-name{
+    padding: 1.5rem 0.5rem;
+}
+
+.meal-name h3{
+    font-size: 1.4rem;
+}
+
+/* Media Queries */
+@media screen and (min-width: 600px){
+    .meal-search-box{
+        width: 540px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (min-width: 768px){
+    #meal{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    .meal-item{
+        margin: 0;
+    }
+    .meal-details{
+        width: 700px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    #meal{
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

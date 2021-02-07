@@ -15,22 +15,21 @@
 </head>
 
 <body>
-    <div class="container">
-        <form class="col-md-6 m-auto py-5">
+        <form class="col-md-6 m-auto py-5 meal-search-box">
+            <h3 style="text-align: center;">Find your Meal</h3>
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Find meal ...">
-                <div class="input-group-append">
-                    <button type="submit" class="btn btn-danger">Search</button>
-                </div>
+                <input type="text" class="form-control" placeholder="Find meal ..." id="search-txt">
+                    <button type="submit" class="btn btn-danger" id="search-button">Search</button>
             </div>
         </form>
 
+        <div class="container meal-wrapper">
         <div class="meal-result">
-            <h2 class="title"> Your Search Results : </h2>
+            <h2 class="title"> Your Search Results </h2>
             <div id="meal">
                 <div class="meal-item">
                     <div class="meal-img">
-                        <img src="meal.jpg">
+                        <img src="photo.jpg">
                     </div>
                     <div class="meal-name">
                         <h3>Potato Chip</h3>
