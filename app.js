@@ -2,13 +2,10 @@ const searchBtn = document.getElementById('search-button');
 searchBtn.addEventListener('click', getMealList);
 
 const mealList = document.getElementById('meal');
-// mealList.addEventListener('click', getMealDetails);
-
-// const mealContent = document.querySelector('.meal-details-content');
 
 // get meal list of food menu
 function getMealList(){
-    let searchInputTxt = document.getElementById('search-txt').value.trim();
+    let searchInputTxt = document.getElementById('search-txt').value;
     fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchInputTxt}`)
     .then(response => response.json())
     .then(data => {
@@ -38,17 +35,15 @@ document.getElementById('search-txt').value="";
 
 }
 
-
+// get meal details by meal id
 const getMealDetails = mealId => {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealId}`;
-    // console.log(url);
     fetch(url)
     .then(res => res.json())
     .then(data => mealDetailsInfo(data.meals[0]));
 }
 
 const mealDetailsInfo = mealName => {
-    // console.log(mealName);
     const mealDetailsDiv = document.getElementById('meal-details-content');
     mealDetailsDiv.innerHTML = `
             <h2 class="recipe-title">${mealName.strMeal}</h2>
